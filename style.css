@@ -1,6 +1,25 @@
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.main-container p {
+    padding: 1rem;
+}
+
 .main {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 4fr;
+    grid-template-columns: minmax(200px, 300px) 1fr;
+    grid-template-rows: 150px;
+    min-height: 100vh;
+}
+.sidebar-header {
+    padding: 12px 0 12px 16px;
 }
 
 .sidebar {
@@ -8,65 +27,154 @@
     display: flex;
     flex-direction: column;
     gap:24px;
+    padding: 8px;
+}
+.sidebar-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 }
 .header {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+.profile-message > * {
+    padding: 2px 0;
 }
 .top-header {
     display: flex;
     justify-content: space-around;
-    padding: 8px;
+    padding: 0px 150px 0px 24px;
     gap: 24px;
     align-items: center;
-
 }
 .bottom-header {
     display: flex;
     justify-content: space-evenly;
-    gap: 24px;
-    padding: 8px;
+    gap: 48px;
+    padding: 0px 100px 0px 24px;
     align-items: center;
-
 }
 .header-side {
     display: flex;
     margin-left: auto;
-    gap: 24px;
+    gap: 48px;
     align-items: center;
+}
+
+.side-buttons {
+    background-color: lightgrey;
+    border-radius: 24px;
+    padding: 0.7rem 1.2rem;
 }
 
 .searchbar {
     background-color: grey;
-    width: 20rem;
-    height: 2rem ;
+    width: 40rem;
+    height: 1.75rem;
+    border-radius: 16px;
 }
-.projects {
+.main-content-header-first {
+    padding: 24px 0 0 24px;
+    max-height: 2rem;
+}
 
+.main-content-header-second {
+    background-color: lightgrey;
+    padding: 0px 0px 12px 0px;
 }
-.announcements {
 
+.announcement {
+    padding: 0px;
+    border-bottom: 1px solid lightgrey;
+    margin: 0 1rem;
 }
+.announcement-last {
+    padding: 0px;
+    margin: 0 1rem;
+}
+
 .trending {
+    background-color: lightgray;
+    padding: 24px 0 12px 0;}
 
-}
 img.icon {
-    min-width: 2rem;
-    max-width: 2rem;
+    width: 2rem;
+    padding: 0 0 0 12px;
 }
 
 img.pfp {
     min-width: 2rem;
-    max-width: 2rem;
+    max-width: 4rem;
 }
 
+.main-container {
+    display: flex;
+    justify-content: flex-end;
+}
 .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.main-content-bar {
+    flex-shrink: 1;
+    padding: 24px;
+    background-color: lightgray;
+}
+.main-content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.75fr;
-    grid-template-rows: repeat(4, minmax(200px, 1fr));
-    gap: 16px;
-    background-color: grey;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, minmax(150px, 1fr));
+    gap: 24px;
+    flex-grow: 2;
+    padding: 12px 24px 24px 24px;
+}
+
+.grid-cell {
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+}
+.main-content-grid > * {
+    background-color: white;
+
 }
 .main-content > *{
-    background-color: aliceblue;
+    background-color: lightgrey;
 
 }
+img.share-icon {
+    width: 2rem;
+    padding: 0 16px 8px 12px;
+}
+div.share-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bar-box {
+    background-color: white;
+    border-radius: 8px;
+    margin-top: auto;
+    min-height: 100;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.trending-item img.pfp {
+    padding: 0 0 0 12px;
+
+}
+
