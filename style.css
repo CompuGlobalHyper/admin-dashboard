@@ -4,8 +4,14 @@ html, body {
     margin: 0;
 }
 
+
 h1, h2, h3, p {
     margin: 0;
+    
+}
+
+h2, h3, p {
+    font-family: 'Abel', sans-serif;
 }
 
 .main-container p {
@@ -20,6 +26,14 @@ h1, h2, h3, p {
 }
 .sidebar-header {
     padding: 12px 0 12px 16px;
+    font-family: 'Baumans', display;
+    text-align: right;
+}
+
+.sidebar-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
 }
 
 .sidebar {
@@ -40,6 +54,8 @@ h1, h2, h3, p {
     flex-direction: column;
     justify-content: center;
     gap: 24px;
+    box-shadow: 0px 5px 10px -5px;
+    z-index: 1;
 }
 .profile-message > * {
     padding: 2px 0;
@@ -141,6 +157,7 @@ img.pfp {
     display: grid;
     grid-template-rows: 1fr auto;
     height: 100%;
+    border-left: 6px solid black;
 }
 .main-content-grid > * {
     background-color: white;
